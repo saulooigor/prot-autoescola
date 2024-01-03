@@ -170,9 +170,11 @@ label {
 		position: absolute;
 		left: -9999px;
 		&:checked + span {
-			background-color: lightgray;
+			background-color: black;
+      color: white;
 			&:before {
-				box-shadow: inset 0 0 0 0.4375em black;
+				box-shadow: inset 0 0 0 0.4375em white;
+        background-color: black;
 			}
 		}
 	}
@@ -231,162 +233,168 @@ label {
     <div class="container">
       <form>
         <label>
-          <input type="radio" name="radio"/>
+          <input type="radio" name="radio" value="first"/>
           <span>Primeira Habilitação</span>
         </label>
         <label>
-          <input type="radio" name="radio"/>
-          <span>Adição de carteira</span>
+          <input type="radio" name="radio" value="add"/>
+          <span>Adição de categoria</span>
         </label>
       </form>
     </div>
-    <div class="row my-3">
-      <div class="col-md-1 my-auto">
-        <div class="checkbox-wrapper-26">
-          <input type="checkbox" id="_checkbox-26">
-          <label for="_checkbox-26">
-            <div class="tick_mark"></div>
-          </label>
+    <div class="listItemsPackage" style="display: none;">
+      <div class="row my-3">
+        <div class="col-md-1 my-auto">
+          <div class="checkbox-wrapper-26">
+            <input type="checkbox" id="_checkbox-26">
+            <label for="_checkbox-26">
+              <div class="tick_mark"></div>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-8 px-4">
+          Inscrição para primeira habilitação
+        </div>
+        <div class="col-md-3 px-4" id="valueItem26">
+          R$ 100,74
         </div>
       </div>
-      <div class="col-md-8">
-        Inscrição para primeira habilitação
-      </div>
-      <div class="col-md-3" id="valueItem26">
-        R$ 100,74
-      </div>
-    </div>
-    <hr class="divider">
-    <div class="row my-3">
-      <div class="col-md-1 my-auto">
-        <div class="checkbox-wrapper-26">
-          <input type="checkbox" id="_checkbox-27">
-          <label for="_checkbox-27">
-            <div class="tick_mark"></div>
-          </label>
+      <hr class="divider">
+      <div class="row my-3">
+        <div class="col-md-1 my-auto">
+          <div class="checkbox-wrapper-26">
+            <input type="checkbox" id="_checkbox-27">
+            <label for="_checkbox-27">
+              <div class="tick_mark"></div>
+            </label>
+          </div>
         </div>
-      </div>
-      <div class="col-md-8 px-auto">
-        Exame médico (Deve ser pago na clínica)
-      </div>
-      <div class="col-md-3" id="valueItem27">R$ 200,20</div>
-    </div>
-    <hr class="divider">
-    <div class="row my-3">
-      <div class="col-md-1 my-auto">
-        <div class="checkbox-wrapper-26">
-          <input type="checkbox" id="_checkbox-28">
-          <label for="_checkbox-28">
-            <div class="tick_mark"></div>
-          </label>
+        <div class="col-md-8 px-4">
+          Exame médico (Deve ser pago na clínica)
         </div>
+        <div class="col-md-3 px-4" id="valueItem27">R$ 200,20</div>
       </div>
-      <div class="col-md-8">
-        Exame psicológico (Deve ser pago na clínica)
-      </div>
-      <div class="col-md-3" id="valueItem28">R$ 200,20</div>
-    </div>
-    <hr class="divider">
-    <div class="row my-3">
-      <div class="col-md-1 my-auto">
-        <div class="checkbox-wrapper-26">
-          <input type="checkbox" id="_checkbox-29">
-          <label for="_checkbox-29">
-            <div class="tick_mark"></div>
-          </label>
+      <hr class="divider">
+      <div class="row my-3">
+        <div class="col-md-1 my-auto">
+          <div class="checkbox-wrapper-26">
+            <input type="checkbox" id="_checkbox-28">
+            <label for="_checkbox-28">
+              <div class="tick_mark"></div>
+            </label>
+          </div>
         </div>
-      </div>
-      <div class="col-md-8">
-        Aulas de Legislação
-      </div>
-      <div class="col-md-3" id="valueItem29">R$ 350,00</div>
-    </div>
-    <hr class="divider">
-    <div class="row my-3">
-      <div class="col-md-1 my-auto">
-        <div class="checkbox-wrapper-26">
-          <input type="checkbox" id="_checkbox-30">
-          <label for="_checkbox-30">
-            <div class="tick_mark"></div>
-          </label>
+        <div class="col-md-8 px-4">
+          Exame psicológico (Deve ser pago na clínica)
         </div>
+        <div class="col-md-3 px-4" id="valueItem28">R$ 200,20</div>
       </div>
-      <div class="col-md-8">
-        Exame de Legislação ou Repetência
-      </div>
-      <div class="col-md-3" id="valueItem30">R$ 100,74</div>
-    </div>
-    <hr class="divider">
-    <div class="row my-3">
-      <div class="col-md-1 my-auto">
-        <div class="checkbox-wrapper-26">
-          <input type="checkbox" id="_checkbox-31">
-          <label for="_checkbox-31">
-            <div class="tick_mark"></div>
-          </label>
+      <hr class="divider">
+      <div class="row my-3">
+        <div class="col-md-1 my-auto">
+          <div class="checkbox-wrapper-26">
+            <input type="checkbox" id="_checkbox-29">
+            <label for="_checkbox-29">
+              <div class="tick_mark"></div>
+            </label>
+          </div>
         </div>
-      </div>
-      <div class="col-md-8">
-        Expedição de Licença de Aprendizagem
-      </div>
-      <div class="col-md-3" id="valueItem31">R$ 100,74</div>
-    </div>
-    <hr class="divider">
-    <div class="row my-3">
-      <div class="col-md-1 my-auto">
-        <div class="checkbox-wrapper-26">
-          <input type="checkbox" id="_checkbox-32">
-          <label for="_checkbox-32">
-            <div class="tick_mark"></div>
-          </label>
+        <div class="col-md-8 px-4">
+          Aulas de Legislação
         </div>
+        <div class="col-md-3 px-4" id="valueItem29">R$ 350,00</div>
       </div>
-      <div class="col-md-8">
-        Aluguel do veículo
-      </div>
-      <div class="col-md-3" id="valueItem32">R$ 300,00</div>
-    </div>
-    <hr class="divider">
-    <div class="row my-3">
-      <div class="col-md-1 my-auto">
-        <div class="checkbox-wrapper-26">
-          <input type="checkbox" id="_checkbox-33">
-          <label for="_checkbox-33">
-            <div class="tick_mark"></div>
-          </label>
+      <hr class="divider">
+      <div class="row my-3">
+        <div class="col-md-1 my-auto">
+          <div class="checkbox-wrapper-26">
+            <input type="checkbox" id="_checkbox-30">
+            <label for="_checkbox-30">
+              <div class="tick_mark"></div>
+            </label>
+          </div>
         </div>
-      </div>
-      <div class="col-md-8">
-        Aulas de direção
-      </div>
-      <div class="col-md-3 " id="valueItem33">R$ 750,00</div>
-    </div>
-    <hr class="divider">
-    <div class="row my-3">
-      <div class="col-md-1 my-auto">
-        <div class="checkbox-wrapper-26">
-          <input type="checkbox" id="_checkbox-34">
-          <label for="_checkbox-34">
-            <div class="tick_mark"></div>
-          </label>
+        <div class="col-md-8 px-4">
+          Exame de Legislação ou Repetência
         </div>
+        <div class="col-md-3 px-4" id="valueItem30">R$ 100,74</div>
       </div>
-      <div class="col-md-8">
-        Exame de Direção ou Repetência
+      <hr class="divider">
+      <div class="row my-3">
+        <div class="col-md-1 my-auto">
+          <div class="checkbox-wrapper-26">
+            <input type="checkbox" id="_checkbox-31">
+            <label for="_checkbox-31">
+              <div class="tick_mark"></div>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-8 px-4">
+          Expedição de Licença de Aprendizagem
+        </div>
+        <div class="col-md-3 px-4" id="valueItem31">R$ 100,74</div>
       </div>
-      <div class="col-md-3" id="valueItem34">R$ 100,74</div>
+      <hr class="divider">
+      <div class="row my-3">
+        <div class="col-md-1 my-auto">
+          <div class="checkbox-wrapper-26">
+            <input type="checkbox" id="_checkbox-32">
+            <label for="_checkbox-32">
+              <div class="tick_mark"></div>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-8 px-4">
+          Aluguel do veículo
+        </div>
+        <div class="col-md-3 px-4" id="valueItem32">R$ 300,00</div>
+      </div>
+      <hr class="divider">
+      <div class="row my-3">
+        <div class="col-md-1 my-auto">
+          <div class="checkbox-wrapper-26">
+            <input type="checkbox" id="_checkbox-33">
+            <label for="_checkbox-33">
+              <div class="tick_mark"></div>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-8 px-4">
+          Aulas de direção
+        </div>
+        <div class="col-md-3 " id="valueItem33">R$ 750,00</div>
+      </div>
+      <hr class="divider">
+      <div class="row my-3">
+        <div class="col-md-1 my-auto">
+          <div class="checkbox-wrapper-26">
+            <input type="checkbox" id="_checkbox-34">
+            <label for="_checkbox-34">
+              <div class="tick_mark"></div>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-8 px-4">
+          Exame de Direção ou Repetência
+        </div>
+        <div class="col-md-3 px-4" id="valueItem34">R$ 100,74</div>
+      </div>
+      <hr class="divider mb-3">
+      <div class="d-flex flex-row-reverse total px-5" style="color: black; font-size: 5.4dvh;">
+        TOTAL: R$ 2203,36
+      </div>
     </div>
-    <hr class="divider mb-3">
-    <div class="d-flex flex-row-reverse total px-5" style="color: black; font-size: 5.4dvh;">
-      TOTAL: R$ 2203,36
-    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
   </body>
   <script>
     $(document).ready(function(){
-      
+
+      //Minimiza a lista de itens de um pacote
+      // $('.listItemsPackage').hide();
+
       //Seta todas as opções incialmente selecionadas
       $('.checkbox-wrapper-26 input[type=checkbox]').prop('checked', true);
 
@@ -409,6 +417,11 @@ label {
         });
 
         $('.total').html('TOTAL: R$ ' + valorTotal.toString().replace('.', ','));
+      });
+
+      //Apresenta as opções de acordo com a opção selecionada
+      $('input[type=radio]').on('change', function(){
+        $('.listItemsPackage').show(1000);
       });
 
     });
