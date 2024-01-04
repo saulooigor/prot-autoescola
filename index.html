@@ -426,21 +426,28 @@
       //Apresenta as opções de acordo com a opção selecionada
       $('input[type=radio]').on('change', function(){
 
+        //Recupera o valor selecionado do radio button
         typeRadioValue = $('input[type=radio]:checked').val();
 
+        //Realiza a renderização dos itens de acordo com a seleção no radio button
         $('.itemPackage').not('.' + typeRadioValue.toString()).hide(1000);
         $('.' + typeRadioValue.toString()).show(1000);
         $('.total').addClass('d-flex flex-row-reverse').show(1100);
-
-        sumValorTotal();
+        
+        //Soma os valores dos itens após renderizar as linhas
+        setTimeout(function(){
+          sumValorTotal();
+        }, 1100);
+        
       });
 
     });
 
+    //Soma o valor total do pacote
     function sumValorTotal(){
       var valorTotal = 0.0;
         $('.itemPackage:visible input[type=checkbox]').each(function(){
-          console.log($(this).is(':hidden'));
+          
           if ($(this).is(":checked"))
           {
             numberOfCheck = $(this).attr('id').slice(-2);
@@ -456,6 +463,9 @@
         });
 
         $('.total').html('TOTAL: R$ ' + valorTotal.toString().replace('.', ','));
+
     }
+
+    
   </script>
 </html>
