@@ -217,17 +217,28 @@
 
     .textAreaExame{
       position: relative;
-      left: 70dvw;
-      bottom: 20dvh;
+      left: calc(100% - 25dvw);
       text-align: center;
       width: fit-content;
       font-family: 'Oswald', sans-serif;
-      font-size: 4.4dvh;
+      font-size: 2.5dvw;
       border: 2px solid black;
-      border-radius: 2px;
+      z-index: 1;
+      border-radius: 6px;
       box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
 
+    .textAreaExame img{
+      width: 20dvw;
+      height: 20dvw;
+      border: #fff 2px solid;
+      border-radius: 50% 10%;
+      object-fit: cover;
+    }
+
+    .examPlace{
+      bottom: 30dvw;
+    }
 
     </style>
     
@@ -247,6 +258,10 @@
 
     <!-- Jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/709e9629b5.js" crossorigin="anonymous"></script>
 
   </head>
   <body>
@@ -428,9 +443,17 @@
         <!-- <span style="position: relative;">TOTAL: </span> -->
       </div>
     </div>
-    <div class="examPlace my-2">
+    <div class="bg-black text-white d-flex textAreaExame px-3 py-2 flex-column ">
+      <span style="font-size: 4.3dvw;">Instrutor</span>
+      <img src="images/instrutor.jpg" class="my-2">
+      <span>Leo Ortiz</span>
+      <div class="d-inline-flex align-items-center">
+        <i class="fa-brands fa-whatsapp mx-2" style="font-size: 2.2ex;"></i>
+        <span>(31) 98765-4321</span>
+      </div>
+    </div>
+    <div class="examPlace" style="position: relative; z-index: 0;">
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15003.56377143654!2d-44.0635641!3d-19.929!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6953ea6336b35%3A0x7d35741e75a9631e!2s%C3%81rea%20de%20Exame%20de%20Dire%C3%A7%C3%A3o%20-%20Contagem!5e0!3m2!1spt-BR!2sbr!4v1704658057266!5m2!1spt-BR!2sbr" width="100%" height="500dvh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="bg-black text-white d-flex textAreaExame px-3">Área de Exame</div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
