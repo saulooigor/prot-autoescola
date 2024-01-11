@@ -521,6 +521,7 @@
 
   </body>
   <script>
+    isVisibleViewPort = false;
     $(document).ready(function(){
 
       //Seta todas as opções incialmente selecionadas
@@ -588,12 +589,12 @@
       const count = parseInt(counter.innerText);
 
       //Calculo de tempo para execução de cada passo
-      const speed = 300;
+      const speed = 400;
       const increment = Math.trunc(target / speed);
 
       if (count < target) {
         counter.innerText = count + increment;
-        setTimeout(updateCount, 1);
+        setTimeout(updateCount, 2);
       } else {
         counter.innerText = target;
       }
@@ -611,29 +612,33 @@
     };
 
     //Executa efeito a cada vez que se clica na tela
-    $(window).on('scrollend', function() {
+    $(window).on('scroll', function() {
       
-      const counter = document.querySelector('#counter');
-
-      if ($('#counter').isInViewport()) {
-        if(counter.innerText == '0'){
-
-          $('#qntAlunosAprovados').animate(
-            {
-              "opacity": "0",
-              "top" :"15px"
-            }, 
-            200,
-            function () {
-              updateCount();
-              $(this).animate({opacity:"1", "top": "0px"});
-            } 
-          );
-          //updateCount();
+      clearTimeout($.data(this, 'scrollTimer'));
+      $.data(this, 'scrollTimer', setTimeout(function() {
+        
+        const counter = document.querySelector('#counter');
+      
+        if ($('#counter').isInViewport()) {
+          if(counter.innerText == '0'){
+            $('#qntAlunosAprovados').animate(
+              {
+                "opacity": "0",
+                "top" :"15px"
+              }, 
+              200,
+              function () {
+                updateCount();
+                $(this).animate({opacity:"1", "top": "0px"});
+              } 
+            );
+            
+          }
+        } else if(counter.innerText == '400') {
+          counter.innerText = '0';
         }
-      } else if(counter.innerText == '350') {
-        counter.innerText = '0';
-      }
+      }, 250));
+      
 
     });
   </script>
