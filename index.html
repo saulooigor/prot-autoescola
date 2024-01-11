@@ -218,12 +218,12 @@
     .textAreaExame{
       position: absolute;
       left: calc(100% - 27dvw);
-      bottom: 1.5%;
+      bottom: -1.5%;
       text-align: center;
       width: fit-content;
       font-family: 'Oswald', sans-serif;
-      font-size: 2.5dvw;
-      height: 103%;
+      font-size: 2.8dvw;
+      height: 104%;
       border-left: .5dvw solid white;
       border-bottom: .5dvw solid white;
       border-right: .5dvw solid white;
@@ -254,6 +254,7 @@
       border: #fff 2px solid;
       border-radius: 50% 10%;
       object-fit: cover;
+      
     }
 
     .examPlace{
@@ -262,9 +263,19 @@
 
     @media (max-width: 480px) {
       .textAreaExame{
-        left: calc(100% - 35dvw);
-        height: 45%;
-        top: -4dvw;
+        height: 100%;
+        position: static;
+        width: 100%;
+        font-size: 1rem;
+      }
+
+      .textAreaExame img{
+        width: 20dvh;
+        height: 20dvh;
+      }
+
+      #areaExame{
+        position: static;
       }
     }
 
@@ -471,13 +482,13 @@
         <!-- <span style="position: relative;">TOTAL: </span> -->
       </div>
     </div>
-    <div class="position-relative w-100 bg-black">
-      <div class="bg-black text-white d-flex textAreaExame px-3 py-2 flex-column justify-content-center align-items-center ">
-        <span style="font-size: 4.3dvw;">Instrutor</span>
-        <img src="images/instrutor.jpg" class="my-2">
+    <div class="position-relative w-100 bg-black" id="areaExame">
+      <div class="bg-black text-white d-flex textAreaExame px-3 py-2 flex-row flex-md-column justify-content-center align-items-center ">
+        <span>Instrutor</span>
+        <img src="images/instrutor.jpg" class="my-2 mx-2">
         <span>Leo Ortiz</span>
-        <div class="d-inline-flex align-items-center">
-          <i class="fa-brands fa-whatsapp mx-1" style="font-size: 2.5dvw;"></i>
+        <div class="d-md-inline-flex align-items-center d-none">
+          <i id="iconAreaExame" class="fa-brands fa-whatsapp mx-1" style="font-size: 2.8dvw;"></i>
           <span>(31) 98765-4321</span>
         </div>
       </div>
