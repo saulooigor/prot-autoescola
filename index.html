@@ -10,7 +10,7 @@
           height: auto;
           overflow-x: hidden;
           font-family: 'Oswald', sans-serif;
-          font-size: 3.5svh;
+          font-size: 36px;
       }
 
       .checkbox-wrapper-26 * {
@@ -23,7 +23,7 @@
       }
     
       .checkbox-wrapper-26 label {
-        --size: 5svh;
+        --size: 28.8px;
         --shadow: calc(var(--size) * .07) calc(var(--size) * .1);
     
         position: relative;
@@ -133,7 +133,7 @@
       }
 
       .col-md-8, .col-md-3, .total{
-        font-size: 4.4svh;
+        font-size: .8rem;
         font-family: 'Oswald', sans-serif;
       }
 
@@ -201,7 +201,7 @@
       	position: relative;
       	overflow: hidden;
       	margin-bottom: 0.375em;
-        font-size: 4.4svh;
+        font-size: .8rem;
         font-family: 'Oswald', sans-serif;
       }
 
@@ -221,7 +221,7 @@
       text-align: center;
       width: fit-content;
       font-family: 'Oswald', sans-serif;
-      font-size: 2.8dvw;
+      font-size: 1rem;
       height: 104%;
       border-left: .5dvw solid white;
       border-bottom: .5dvw solid white;
@@ -257,7 +257,7 @@
     }
 
     .bannerContador{
-      font-size: 18.4dvw;
+      font-size: 5rem;
       font-family: 'Oswald', sans-serif;
       font-weight: bold;
       -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
@@ -275,8 +275,6 @@
     }
     
     @media (max-width: 480px) {
-
-      body {height: 100%;}
 
       .textAreaExame{
         height: 100%;
@@ -334,7 +332,7 @@
         </label>
       </form>
     </div>
-    <div class="text-center text-black p-1 mx-auto mb-3" style="font-family: 'DM Sans', serif; font-size: 4svh; font-weight: 600;">
+    <div class="text-center text-black p-1 mx-auto mb-3" style="font-family: 'DM Sans', serif; font-size: .7rem; font-weight: 600;">
       Selecione os itens abaixo para saber o quão perto você está da sua habilitação!
     </div>
     <div class="listItemsPackage">
@@ -493,31 +491,31 @@
         </div>
         <hr class="divider mb-3">
       </div>
-      <div class="total px-5" style="color: black; font-size: 5.4svh; font-weight: bold;">
+      <div class="total px-5" style="color: black; font-size: .9rem; font-weight: bold;">
         <span class="mx-1" id="valorAlterado" style="position: relative;">R$ 2203,36</span>
         TOTAL:
         <!-- <span style="position: relative;">TOTAL: </span> -->
       </div>
     </div>
     <div class="position-relative w-100 bg-black" id="areaExame">
-      <div class="bg-black text-white d-flex textAreaExame px-3 py-2 flex-row flex-md-column justify-content-center align-items-center ">
+      <div class="bg-black text-white d-flex textAreaExame px-2 py-2 flex-row flex-md-column justify-content-center align-items-center ">
         <span>Instrutor</span>
         <img src="images/instrutor.jpg" class="my-2 mx-2">
         <span>Leo Ortiz</span>
         <div class="d-md-inline-flex align-items-center d-none">
-          <i id="iconAreaExame" class="fa-brands fa-whatsapp mx-1" style="font-size: 2.8dvw;"></i>
+          <i id="iconAreaExame" class="fa-brands fa-whatsapp mx-1" style="font-size: .8rem;"></i>
           <span>(31) 98765-4321</span>
         </div>
       </div>
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15003.56377143654!2d-44.0635641!3d-19.929!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6953ea6336b35%3A0x7d35741e75a9631e!2s%C3%81rea%20de%20Exame%20de%20Dire%C3%A7%C3%A3o%20-%20Contagem!5e0!3m2!1spt-BR!2sbr!4v1704658057266!5m2!1spt-BR!2sbr" width="100%" height="500svh" style="border:0;z-index: -1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="row bg-black text-white">
-      <div class="col-md-6 align-items-center justify-content-center flex-column d-flex p-3 bannerContador fst-italic">
-        <div id="qntAlunosAprovados" class="fst-italic position-relative">
-          <span class="plus">+</span>
-          <span id="counter" data-target="400">0</span>
+      <div class="col-md-6 align-items-start align-items-md-center justify-content-center flex-column d-flex p-3 bannerContador fst-italic">
+        <div id="qntAlunosAprovados" class="fst-italic position-relative d-flex justify-content-center">
+          <span>+</span>
+          <span class="text-center" id="counter" data-target="400">0</span>
         </div>
-        <span style="font-size: 7svh;">Alunos Aprovados</span>
+        <span class="text-center" style="font-size: 2rem;">Alunos Aprovados</span>
       </div>
       <!-- <div class="col-md-6">TESTE SAULO</div> -->
     </div>
