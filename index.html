@@ -613,34 +613,32 @@
     };
 
     //Executa efeito a cada vez que se clica na tela
-    $(window).on('scroll', function() {
+    // $(window).on('scroll', function() {
       
-      clearTimeout($.data(this, 'scrollTimer'));
-      $.data(this, 'scrollTimer', setTimeout(function() {
+    //   clearTimeout($.data(this, 'scrollTimer'));
+    //   $.data(this, 'scrollTimer', setTimeout(function() {
         
-        const counter = document.querySelector('#counter');
+    //     const counter = document.querySelector('#counter');
       
-        if ($('#counter').isInViewport()) {
-          if(counter.innerText == '0'){
-            $('#qntAlunosAprovados').animate(
-              {
-                "opacity": "0",
-                "top" :"15px"
-              }, 
-              200,
-              function () {
-                updateCount();
-                $(this).animate({opacity:"1", "top": "0px"});
-              } 
-            );
+    //     if ($('#counter').isInViewport()) {
+    //       if(counter.innerText == '0'){
+    //         $('#qntAlunosAprovados').animate(
+    //           {
+    //             "opacity": "0",
+    //             "top" :"15px"
+    //           }, 
+    //           200,
+    //           function () {
+    //             updateCount();
+    //             $(this).animate({opacity:"1", "top": "0px"});
+    //           } 
+    //         );
             
-          }
-        } else if(counter.innerText == '400') {
-          counter.innerText = '0';
-        }
-      }, 250));
-      
-
-    });
+    //       }
+    //     } else if(counter.innerText == '400') {
+    //       counter.innerText = '0';
+    //     }
+    //   }, 250));
+    // });
   </script>
 </html>
