@@ -256,7 +256,7 @@
     }
 
     .bannerContador{
-      font-size: 18.4dvh;
+      font-size: 18.4dvw;
       font-family: 'Oswald', sans-serif;
       font-weight: bold;
       -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
@@ -264,6 +264,7 @@
       mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
       mask-size: 200%;
       animation: shine 2s linear infinite;
+      
       
     }
 
@@ -508,9 +509,9 @@
     </div>
     <div class="row bg-black text-white">
       <div class="col-md-6 align-items-center justify-content-center flex-column d-flex p-3 bannerContador fst-italic">
-        <div id="qntAlunosAprovados" class="fst-italic">
+        <div id="qntAlunosAprovados" class="fst-italic position-relative">
           <span class="plus">+</span>
-          <span id="counter" data-target="350">0</span>
+          <span id="counter" data-target="400">0</span>
         </div>
         <span style="font-size: 7dvh;">Alunos Aprovados</span>
       </div>
@@ -610,7 +611,7 @@
     };
 
     //Executa efeito a cada vez que se clica na tela
-    $(window).on('scroll', function() {
+    $(window).on('scrollend', function() {
       
       const counter = document.querySelector('#counter');
 
@@ -620,12 +621,12 @@
           $('#qntAlunosAprovados').animate(
             {
               "opacity": "0",
-              "top" :"1dvh"
+              "top" :"15px"
             }, 
             200,
             function () {
               updateCount();
-              $(this).animate({opacity:"1", "top": "0dvh"});
+              $(this).animate({opacity:"1", "top": "0px"});
             } 
           );
           //updateCount();
