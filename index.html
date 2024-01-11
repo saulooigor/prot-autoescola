@@ -11,7 +11,6 @@
           overflow-x: hidden;
           font-family: 'Oswald', sans-serif;
           font-size: 3.5dvh;
-          
       }
 
       .checkbox-wrapper-26 * {
@@ -257,6 +256,23 @@
       
     }
 
+    .bannerContador{
+      font-size: 18.4dvh;
+      font-family: 'Oswald', sans-serif;
+      font-weight: bold;
+      -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+      -webkit-mask-size: 200%;
+      mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+      mask-size: 200%;
+      animation: shine 2s linear infinite;
+      
+    }
+
+    @keyframes shine {
+      from { -webkit-mask-position: 150%; mask-position: 150%; }
+      to { -webkit-mask-position: -50%; mask-position: -50%;}
+    }
+    
     @media (max-width: 480px) {
       .textAreaExame{
         height: 100%;
@@ -492,14 +508,14 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15003.56377143654!2d-44.0635641!3d-19.929!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6953ea6336b35%3A0x7d35741e75a9631e!2s%C3%81rea%20de%20Exame%20de%20Dire%C3%A7%C3%A3o%20-%20Contagem!5e0!3m2!1spt-BR!2sbr!4v1704658057266!5m2!1spt-BR!2sbr" width="100%" height="500dvh" style="border:0;z-index: -1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="row bg-black text-white">
-      <div class="col-md-6 align-items-center justify-content-center flex-column">
-        <div class="d-inline-flex fst-italic">
+      <div class="col-md-6 align-items-center justify-content-center flex-column d-flex p-3 bannerContador fst-italic">
+        <div id="qntAlunosAprovados" class="fst-italic">
           <span class="plus">+</span>
-          <span id="counter">100</span>
+          <span id="counter" data-target="350">0</span>
         </div>
-
+        <span style="font-size: 7dvh;">Alunos Aprovados</span>
       </div>
-      <div class="col-md-6"> </div>
+      <!-- <div class="col-md-6">TESTE SAULO</div> -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
@@ -532,7 +548,6 @@
         }, 1100);
         
       });
-
     });
 
     //Soma o valor total do pacote
@@ -565,5 +580,61 @@
           } 
         );
     }
+
+    function updateCount(){
+      //Busca os dados para montar o efeito
+      const counter = document.querySelector('#counter');
+      const target = parseInt(counter.getAttribute('data-target'));
+      const count = parseInt(counter.innerText);
+
+      //Calculo de tempo para execução de cada passo
+      const speed = 300;
+      const increment = Math.trunc(target / speed);
+
+      if (count < target) {
+        counter.innerText = count + increment;
+        setTimeout(updateCount, 1);
+      } else {
+        counter.innerText = target;
+      }
+    }  
+    
+    //Função para validar se o elemento está na tela pra executar efeito
+    $.fn.isInViewport = function() {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+  
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+  
+      return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+    //Executa efeito a cada vez que se clica na tela
+    $(window).on('resize mouseenter scroll', function() {
+      
+      const counter = document.querySelector('#counter');
+
+      if ($('#counter').isInViewport()) {
+        if(counter.innerText == '0'){
+
+          $('#qntAlunosAprovados').animate(
+            {
+              "opacity": "0",
+              "top" :"1dvh"
+            }, 
+            200,
+            function () {
+              updateCount();
+              $(this).animate({opacity:"1", "top": "0dvh"});
+            } 
+          );
+          //updateCount();
+        }
+      } else if(counter.innerText == '350') {
+        counter.innerText = '0';
+      }
+
+    });
   </script>
 </html>
