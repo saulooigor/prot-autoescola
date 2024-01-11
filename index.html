@@ -7,7 +7,6 @@
       body {
           margin: 0;
           padding: 0;
-          height: 100%; /* needed for container min-height */
           overflow-x: hidden;
           font-family: 'Oswald', sans-serif;
           font-size: 3.5dvh;
@@ -611,7 +610,7 @@
     };
 
     //Executa efeito a cada vez que se clica na tela
-    $(window).on('resize mouseenter scroll', function() {
+    $(window).on('scroll', function() {
       
       const counter = document.querySelector('#counter');
 
