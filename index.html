@@ -265,8 +265,21 @@
       mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
       mask-size: 200%;
       animation: shine 2s linear infinite;
-      
-      
+    }
+
+    .location-section{
+      background-image: url(images/bg_maps.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: fit-content;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .component-map{
+      border: 5px solid white;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
     @keyframes shine {
@@ -292,6 +305,10 @@
       #areaExame{
         position: static;
       }
+
+      #removePadding{
+        padding: auto;
+      }
     }
 
     </style>
@@ -306,10 +323,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Oswald&family=DM+Sans:opsz,wght@9..40,100&display=swap" rel="stylesheet">
 
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
     <!-- Jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
@@ -332,7 +352,7 @@
         </label>
       </form>
     </div>
-    <div class="text-center text-black p-1 mx-auto mb-3" style="font-family: 'DM Sans', serif; font-size: .7rem; font-weight: 600;">
+    <div class="text-center text-black p-1 mx-auto mb-3" style="font-family: 'DM Sans', serif; font-size: .5rem; font-weight: 600;">
       Selecione os itens abaixo para saber o quão perto você está da sua habilitação!
     </div>
     <div class="listItemsPackage">
@@ -519,8 +539,92 @@
       </div>
       <!-- <div class="col-md-6">TESTE SAULO</div> -->
     </div>
+    <div class="row location-section">
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3751.1187526640133!2d-44.13365792505075!3d-19.919399981466643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDU1JzA5LjgiUyA0NMKwMDcnNTEuOSJX!5e0!3m2!1spt-BR!2sbr!4v1687529525501!5m2!1spt-BR!2sbr" class="component-map" width="98%" height="500px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-md-6 d-flex align-items-center flex-column justify-content-center" style="font-family: 'DM Sans', sans-serif; font-size: .7rem; font-weight: 900;">
+        <div class="d-flex flex-row w-100 pt-3">
+          <span class="material-symbols-outlined mx-2" style="font-size: 1rem;">
+            location_on
+          </span>
+          RUA ALEXANDRITA Nº 697 SAPUCAIAS II
+        </div>
+        <div class="d-md-flex flex-row w-100">
+          <span class="material-symbols-outlined mx-2" style="font-size: 1rem; color: transparent;">
+            location_on
+          </span>
+          CONTAGEM - MG
+        </div>
+        <div class="d-inline-flex w-100 my-3">
+          <span class="material-symbols-outlined mx-2" style="font-size: 1rem;">
+            call
+          </span>
+          (31) 93333-3344
+        </div>
+        <div class="d-inline-flex w-100">
+          <span class="material-symbols-outlined mx-2" style="font-size: 1rem;">
+            mail
+          </span>
+          mail@mail.com.br
+        </div>
+        <div class="row mt-md-5 mt-2 w-100">
+          <div  id="removePadding" class="col-md-6 d-flex flex-column"  style="padding-left: 0 !important;">
+            <div class="d-md-flex flex-row w-100 text-center">
+              <span class="material-symbols-outlined mx-2 d-none d-md-flex" style="font-size: 1rem;">
+                schedule
+              </span>
+              Seg á Sex.
+            </div>
+            <div class="d-md-flex flex-row w-100 text-center">
+              <span class="material-symbols-outlined mx-2 d-none d-md-flex" style="font-size: 1rem; color: transparent;">
+                location_on
+              </span>
+              06hrs ás 22hrs
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-md-flex flex-row w-100 text-center">
+              <span class="material-symbols-outlined mx-2 d-none d-md-flex" style="font-size: 1rem; color: transparent;">
+                location_on
+              </span>
+              Sábado
+            </div>
+            <div class="d-md-flex flex-row w-100 text-center">
+              <span class="material-symbols-outlined mx-2 d-none d-md-flex" style="font-size: 1rem; color: transparent;">
+                location_on
+              </span>
+              07hrs ás 12hrs
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row bg-black text-white py-2 px-3" style="font-family: 'Oswald', sans-serif; font-size: .6rem;">
+      <div class="col-md-6 d-flex flex-column-reverse">
+        <span class="align-self-start">CNPJ: 01.234.567-0001/89</span>
+        <span class="align-self-start">Contagem - MG</span>
+        <span class="align-self-start">Rua Honorio Gurgel Nº 12 - CEP: 32072290</span>
+        <span class="align-self-start">Prótotipo Auto Escola Empresa LTDA</span>
+      </div>
+      <div class="col-md-6 d-flex flex-column">
+        <span class="align-self-end mb-2 mt-md-2" style="font-style: italic; font-size: .8rem; font-weight: 900;">NOS SIGA NAS REDES SOCIAIS</span> 
+        <div class="d-inline-flex w-100 justify-content-end align-items-center">
+          <i class="fa-brands fa-instagram mx-2" style="font-size: .6rem;"></i>
+          <span>@protautoescola09</span>
+        </div>
+        <div class="d-inline-flex w-100 justify-content-end align-items-center">
+          <i class="fa-brands fa-facebook mx-2" style="font-size: .6rem;"></i>
+          <span>protautoescola100</span>
+        </div>
+        <div class="d-inline-flex w-100 justify-content-end align-items-center">
+          <i class="fa-brands fa-tiktok mx-2" style="font-size: .6rem;"></i>
+          <span>@protautoescolatiktok</span>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-black bg-white" style="font-size: 0.35rem; font-family: Arial, Helvetica, sans-serif;">Developed by @saulooigor</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
   </body>
   <script>
     isVisibleViewPort = false;
@@ -575,11 +679,11 @@
         $('#valorAlterado').animate(
           {
             "opacity": "toggle",
-            "top" :"1svh"
+            "top" :"300px"
           }, 
           500,
           function () {
-            $(this).html('R$ ' + valorTotal.toString().replace('.', ',')).animate({opacity:"toggle", "top": "0svh"});
+            $(this).html('R$ ' + valorTotal.toString().replace('.', ',')).animate({opacity:"toggle", "top": "0px"});
           } 
         );
     }
