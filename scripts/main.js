@@ -24,9 +24,40 @@ isVisibleViewPort = false;
         setTimeout(function(){
           sumValorTotal();
         }, 1100);
-        
       });
+
+      setInterval(function(){
+        $('.anim-img').each(function(i, element){
+          setTimeout(function(){
+            animateAlunoImage(element);
+          }, (i+1) * 2000);
+        });
+      }, 15000);
+
+      //TESTE HERE
+      
     });
+
+    //Realiza o efeito de cada um das imagens
+    function animateAlunoImage(element){
+      $(element).animate(
+        {
+          "opacity":"1",
+          "height":"120%",
+          "bottom":"20px"
+        },
+        2000,
+        function (){
+          $(this).animate(
+            {
+              "opacity":".5",
+              "height":"100%",
+              "bottom":"0px"
+            }, 1000
+          );
+        }
+      );
+    }
 
     //Soma o valor total do pacote
     function sumValorTotal(){
@@ -49,12 +80,12 @@ isVisibleViewPort = false;
 
         $('#valorAlterado').animate(
           {
-            "opacity": "toggle",
+            "opacity": ".3",
             "top" :"300px"
           }, 
           500,
           function () {
-            $(this).html('R$ ' + valorTotal.toString().replace('.', ',')).animate({opacity:"toggle", "top": "0px"});
+            $(this).html('R$ ' + valorTotal.toString().replace('.', ',')).animate({opacity:"1", "top": "0px"});
           } 
         );
     }
