@@ -216,16 +216,12 @@
 
     .textAreaExame{
       position: absolute;
-      left: calc(100% - 27dvw);
-      bottom: -1.5%;
+      left: calc(100% - 26.5dvw);
       text-align: center;
       width: fit-content;
       font-family: 'Oswald', sans-serif;
       font-size: 1rem;
-      height: 104%;
-      border-left: .5dvw solid white;
-      border-bottom: .5dvw solid white;
-      border-right: .5dvw solid white;
+      height: 100%;
       z-index: 1;
 
       --x-offset: -0.0625em;
@@ -276,6 +272,10 @@
       padding-bottom: 20px;
     }
 
+    #areaExame{
+      height: 500px;
+    }
+
     .component-map{
       border: 5px solid white;
       border-radius: 5px;
@@ -304,6 +304,14 @@
 
       #areaExame{
         position: static;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+      }
+
+      #mapaAreaExame{
+        height: 500px;
       }
 
       #removePadding{
@@ -317,6 +325,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Prot Auto Escola</title>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/marketing.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -339,6 +350,7 @@
 
   </head>
   <body>
+    <!-- Primeira habilitação ou Adição de Categoria -->
     <div class="container">
       <form>
         <label>
@@ -352,9 +364,11 @@
         </label>
       </form>
     </div>
+    <!-- Dica de uso da calculadora -->
     <div class="text-center text-black p-1 mx-auto mb-3" style="font-family: 'DM Sans', serif; font-size: .5rem; font-weight: 600;">
       Selecione os itens abaixo para saber o quão perto você está da sua habilitação!
     </div>
+    <!-- Itens de cálculo para o pacote -->
     <div class="listItemsPackage">
       <div class="itemPackage first">
         <div class="row my-3">
@@ -514,10 +528,10 @@
       <div class="total px-5" style="color: black; font-size: .9rem; font-weight: bold;">
         <span class="mx-1" id="valorAlterado" style="position: relative;">R$ 2203,36</span>
         TOTAL:
-        <!-- <span style="position: relative;">TOTAL: </span> -->
       </div>
     </div>
-    <div class="position-relative w-100 bg-black" id="areaExame">
+    <!-- Área de exame e Instrutor -->
+    <div class="position-relative w-100 bg-white" id="areaExame">
       <div class="bg-black text-white d-flex textAreaExame px-2 py-2 flex-row flex-md-column justify-content-center align-items-center ">
         <span>Instrutor</span>
         <img src="images/instrutor.jpg" class="my-2 mx-2">
@@ -527,17 +541,28 @@
           <span>(31) 98765-4321</span>
         </div>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15003.56377143654!2d-44.0635641!3d-19.929!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6953ea6336b35%3A0x7d35741e75a9631e!2s%C3%81rea%20de%20Exame%20de%20Dire%C3%A7%C3%A3o%20-%20Contagem!5e0!3m2!1spt-BR!2sbr!4v1704658057266!5m2!1spt-BR!2sbr" width="100%" height="500svh" style="border:0;z-index: -1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15003.56377143654!2d-44.0635641!3d-19.929!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6953ea6336b35%3A0x7d35741e75a9631e!2s%C3%81rea%20de%20Exame%20de%20Dire%C3%A7%C3%A3o%20-%20Contagem!5e0!3m2!1spt-BR!2sbr!4v1704658057266!5m2!1spt-BR!2sbr" width="100%" height="100%" id="mapaAreaExame" style="border:0;z-index: -1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <div class="row bg-black text-white">
-      <div class="col-md-6 align-items-start align-items-lg-center justify-content-center flex-column d-flex p-3 bannerContador fst-italic">
+    <!-- Marketing -->
+    <div id="marketing" class="row text-black">
+      <div class="col-md-6 align-items-start align-items-lg-center justify-content-center flex-column d-flex p-2 bannerContador fst-italic">
         <div id="qntAlunosAprovados" class="fst-italic position-relative d-flex justify-content-center">
           <span>+</span>
           <span class="text-center" id="counter" data-target="400">0</span>
         </div>
         <span class="text-center" style="font-size: 2rem;">Alunos Aprovados</span>
       </div>
-      <!-- <div class="col-md-6">TESTE SAULO</div> -->
+      <div id="gridAlunos" class="col-md-6">
+        <div class="row">
+          <div class="col-4"><img src="images/aluno1.jpeg"></div>
+          <div class="col-4"><img src="images/aluno2.jpeg"></div>
+          <div class="col-4"><img src="images/aluno3.jpeg"></div>
+        </div>
+        <div class="row">
+          <div class="col-6"><img src="images/aluno4.jpeg"></div>
+          <div class="col-6"><img src="images/aluno5.jpeg"></div>
+        </div>
+      </div>
     </div>
     <div class="row location-section">
       <div class="col-md-6 d-flex justify-content-center align-items-center">

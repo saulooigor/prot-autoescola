@@ -1,0 +1,15 @@
+#marketing, #marketing #gridAlunos{
+    padding: 0 !important;
+}
+
+#marketing #gridAlunos .row *{
+    padding: 0 !important;
+
+    > img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: .5;
+    }
+}
+
