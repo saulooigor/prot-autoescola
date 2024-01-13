@@ -1,0 +1,69 @@
+  
+.textAreaExame{
+    position: absolute;
+    left: calc(100% - 26.5dvw);
+    text-align: center;
+    width: fit-content;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    height: 100%;
+    z-index: 1;
+  
+    --x-offset: -0.0625em;
+    --y-offset: 0.0625em;
+    --stroke: 0.025em;
+    --background-color: rgba(128, 128, 128, 0.395);
+    --stroke-color: gray;
+  
+    text-shadow: 
+  
+      var(--x-offset)
+      var(--y-offset)
+      0px
+      var(--background-color), 
+  
+      calc( var(--x-offset) - var(--stroke) )
+      calc( var(--y-offset) + var(--stroke) )
+      0px
+      var(--stroke-color);
+}
+  
+.textAreaExame img{
+  width: 20dvw;
+  height: 20dvw;
+  border: #fff 2px solid;
+  border-radius: 50% 10%;
+  object-fit: cover;
+  
+}
+
+#areaExame{
+  height: 500px;
+}
+
+@media (max-width: 480px) {
+    .textAreaExame{
+      height: 100%;
+      position: static;
+      width: 100%;
+      font-size: 1rem;
+      border: 0px;
+    }
+
+    .textAreaExame img{
+      width: 20svh;
+      height: 20svh;
+    }
+
+    #areaExame{
+      position: static;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    #mapaAreaExame{
+      height: 500px;
+    }
+}
