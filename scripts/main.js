@@ -138,9 +138,15 @@
 
         if($('#gridAlunos').isInViewport() && !animationAlunosImage){
           animaTodasImagens();
-          setInterval(function(){
-            animaTodasImagens();
-          }, 15000);
+          // setInterval(function(){
+          //   animaTodasImagens();
+          // }, 15000);
+
+          for (let index = 0; index < 10; index++) {
+            setTimeout(() => {
+              animaTodasImagens();
+            },  (index + 1) * 16000);
+          }
         }
       }, 200));
     });
