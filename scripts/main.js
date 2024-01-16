@@ -1,4 +1,5 @@
-isVisibleViewPort = false;
+    isVisibleViewPort = false;
+    animationAlunosImage = false;
     $(document).ready(function(){
 
       //Seta todas as opções incialmente selecionadas
@@ -24,18 +25,7 @@ isVisibleViewPort = false;
         setTimeout(function(){
           sumValorTotal();
         }, 1100);
-      });
-
-      setInterval(function(){
-        $('.anim-img').each(function(i, element){
-          setTimeout(function(){
-            animateAlunoImage(element);
-          }, (i+1) * 2000);
-        });
-      }, 15000);
-
-      //TESTE HERE
-      
+      });      
     });
 
     //Realiza o efeito de cada um das imagens
@@ -80,12 +70,12 @@ isVisibleViewPort = false;
 
         $('#valorAlterado').animate(
           {
-            "opacity": ".3",
-            "top" :"300px"
+            "opacity": "0"
+            
           }, 
           500,
           function () {
-            $(this).html('R$ ' + valorTotal.toString().replace('.', ',')).animate({opacity:"1", "top": "0px"});
+            $(this).html('R$ ' + valorTotal.toString().replace('.', ',')).animate({opacity:"1"});
           } 
         );
     }
@@ -145,5 +135,27 @@ isVisibleViewPort = false;
         } else if(counter.innerText == '400') {
           counter.innerText = '0';
         }
-      }, 250));
+
+        if($('#gridAlunos').isInViewport() && !animationAlunosImage){
+          animaTodasImagens();
+          setInterval(function(){
+            animaTodasImagens();
+          }, 15000);
+        }
+      }, 200));
     });
+
+    //Executa a animação em todas as imagens
+    function animaTodasImagens(){
+      animationAlunosImage = true;
+
+      $('.anim-img').each(function(i, element){
+        setTimeout(function(){
+          animateAlunoImage(element);
+
+          if(i == 4){
+            animationAlunosImage = false;
+          }
+        }, (i+1) * 3000);
+      });
+    }
