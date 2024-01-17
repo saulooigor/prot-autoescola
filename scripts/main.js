@@ -1,5 +1,6 @@
-    isVisibleViewPort = false;
-    animationAlunosImage = false;
+    var isVisibleViewPort = false;
+    var animationAlunosImage = false;
+    
     $(document).ready(function(){
 
       //Seta todas as opções incialmente selecionadas
