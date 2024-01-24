@@ -137,12 +137,6 @@
 
         if($('#gridAlunos').isInViewport() && !animationAlunosImage){
           animaTodasImagens();
-          
-          for (let index = 0; index < 4; index++) {
-            setTimeout(() => {
-              animaTodasImagens();
-            },  (index + 1) * 20000);
-          }
         }
       }, 200));
     });
