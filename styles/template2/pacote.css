@@ -11,6 +11,9 @@
     z-index: 0;
     padding: 0px 10px 0px 10px;
     background-color: gray;
+    /* box-shadow: 8px 8px white, -8px -8px white; */
+    border: 7px white;
+    border-style: ridge;
 }
 
 #valorParcelado{
@@ -68,7 +71,7 @@
     color: black;
     transform: scaleY(1);
     text-align: start;
-    text-shadow: 2px 4px  white, 7px 7px gray;
+    text-shadow: 2px 4px  white, 7px 7px grey;
     position: relative;
     right: 7.5dvi;
     line-height: 100%;
