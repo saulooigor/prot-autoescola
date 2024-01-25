@@ -21,7 +21,7 @@
     left: calc(12dvi + 20px);
     border-radius: 50%;
     background-color: white;
-    box-shadow: 8px 8px 0px #000000;
+    box-shadow: 4px 4px 0px #000000;
 }
 
 #valorParcelado{
@@ -109,9 +109,6 @@
     #pix{
         top: 6.1dvi;
         left: calc(27dvi + 20px);
-        border-radius: 50%;
-        background-color: white;
-        box-shadow: 8px 8px 0px #000000;
         width: 54px;
         height: 54px;
         
