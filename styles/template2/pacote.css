@@ -62,6 +62,20 @@
     background-color: rgba(211, 211, 211, 0.61);
 }
 
+#tituloPacote{
+    font-family: 'Teko', sans-serif !important;
+    font-size: 9vi;
+    color: black;
+    transform: scaleY(1);
+    text-align: start;
+    text-shadow: 2px 4px  white, 7px 7px gray;
+    position: relative;
+    right: 7.5dvi;
+    line-height: 100%;
+    top: 2.1dvi;
+    z-index: 3;
+}
+
 @media (max-width:480px) {
     #valorVista{
         font-size: 15dvi;
@@ -73,5 +87,11 @@
 
     .itensPacote{
         font-size: 6.2dvi;
+    }
+
+    #tituloPacote{
+        font-size: 17vi;
+        right: 18.5dvi;
+        top: 2.1dvi;
     }
 }
