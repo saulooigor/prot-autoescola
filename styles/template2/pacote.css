@@ -71,7 +71,7 @@
     color: black;
     transform: scaleY(1);
     text-align: start;
-    text-shadow: 2px 4px  white, 7px 7px grey;
+    text-shadow: 4px 4px  white, 5.5px 5.5px gray;
     position: relative;
     right: 7.5dvi;
     line-height: 100%;
