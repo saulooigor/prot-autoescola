@@ -53,16 +53,28 @@
 
 @media (max-width: 480px) {
     #info{
-        font-size: 6.5vi;
+        font-size: 8.2vi;
+
     }
 
     #infoDescrita .contato{
         width: 100%;
-        padding-right: 0%;
+
+        > i{
+            padding: 0% !important;
+            margin-left: 2px;
+        }
     }
 
     #local{
         background: linear-gradient(110deg, transparent 0% 10%, gray 10% calc(10% + 22px), transparent calc(10% + 22px) calc(11% + 22px) ,gray calc(11% + 22px) 100%);
+        padding-right: 1px !important;
+        padding-left: 1px !important;
+    }
+
+    #infoDescrita{
+        padding-right: 6% !important;
+        padding-left: 7.5% !important;
     }
 
     
