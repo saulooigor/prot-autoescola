@@ -1,6 +1,6 @@
 #info{
     background-color:  rgba(211, 211, 211, 0.61);
-    height: 400px;
+    /* height: 400px; */
     font-size: 3vi;
     color: black;
     font-family: 'Bebas Neue', sans-serif !important;
@@ -11,27 +11,41 @@
     background: #CF7F23;
     background: linear-gradient(to right, #CF7F23 0%, #CF1512 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     
 }
 
-#infoDescrita div{
+#infoDescrita .contato{
     background: linear-gradient(110deg, transparent 0% 7.5%, white 7.5% 100%);
     width: 80%;
     padding-right: 2px;
-    box-shadow: -20px 0 10px -20px rgba(0,0,0,0.45) inset;
+    border-right: 5px solid whitesmoke;
 }
 
-#infoDescrita div::after{
+#infoDescrita .contato::after{
     content: '';
     position: relative;
     width: 22px;
     height: 100%;
     top: 0px;
     left: -95.6%;
-    background-color: white;
+    background-color: whitesmoke;
     transform: skew(-20deg);
-    box-shadow: 0 20px 10px -20px rgba(0,0,0,0.45) inset, 20px 0 10px -20px rgba(0,0,0,0.45) inset;
-    
+}
 
+#local{
+    width: 100%;
+    justify-content: space-between;
+    color: rgba(211, 211, 211, 1);
+    background-color: gray;
+    text-shadow: 1px 1px white;
+
+    > div{
+        line-height: 90%;
+    }
+
+    > i{
+        font-size: 6vi;
+    }
 }
