@@ -36,16 +36,21 @@
 
 #local{
     width: 100%;
-    justify-content: space-between;
     color: rgba(211, 211, 211, 1);
-    background-color: gray;
     text-shadow: 1px 1px white;
+    background: linear-gradient(110deg, transparent 0% 14%, gray 14% calc(14% + 22px), transparent calc(14% + 22px) calc(15% + 22px) ,gray calc(15% + 22px) 100%);
 
     > div{
         line-height: 90%;
+        text-align: end;
     }
 
-    > i{
-        font-size: 6vi;
-    }
+}
+
+.component-map{
+    border: 4px solid white;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    
+    
+    
 }
