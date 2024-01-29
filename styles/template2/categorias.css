@@ -8,6 +8,7 @@
     align-items: center;
     font-family: 'Bebas Neue', sans-serif !important;
     font-size: 6vi;
+    
 
     > span{
         padding: 0px 0px 10px 15px;
@@ -17,8 +18,10 @@
         font-weight: 400;
         flex-direction: column;
         display: flex;
+        /* border-left: 8px solid rgba(255, 255, 255, 1); 
+        background: linear-gradient(to right, transparent 1.5%, rgba(255, 255, 255, 0.25) 1.5%); */
         text-shadow: 1.5px 1.5px grey, 2.7px 2.7px 5px black;
-        /* border-radius: 16px; */
+        
         
         > i {
             margin-top: auto;
