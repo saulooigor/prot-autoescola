@@ -7,6 +7,7 @@
         object-fit: cover;
         padding: 0px !important;
         opacity: .4;
+       
     }
 }
 
@@ -29,11 +30,9 @@
     justify-content: center;
     align-items: center;
     text-align: end;
-    /* border: 1.5px solid gray; */
     background-color: lightgrey;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
-    
 }
 
 #segundaLinha::after{
@@ -54,7 +53,6 @@
     justify-content: center;
     align-items: center;
     text-align: start;
-    /* border: 1.5px solid gray; */
     background-color: lightgrey;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
