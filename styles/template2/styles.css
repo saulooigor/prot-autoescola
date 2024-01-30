@@ -87,7 +87,8 @@
     background: linear-gradient(110deg, transparent 0% 7.5%, white 7.5% 100%);
     width: 80%;
     padding-right: 2px;
-    border-right: 5px solid whitesmoke;
+    /* border-right: 5px solid gray; */
+    box-shadow: -20px 0 10px -20px rgba(0,0,0,0.45) inset;
 }
 
 #infoDescrita .contato::after{
@@ -97,7 +98,7 @@
     height: 100%;
     top: 0px;
     left: -95.6%;
-    background-color: whitesmoke;
+    background-color: gray;
     transform: skew(-20deg);
 }
 
@@ -105,7 +106,7 @@
     width: 100%;
     color: rgba(211, 211, 211, 1);
     text-shadow: 1px 1px white;
-    background: linear-gradient(110deg, transparent 0% 14%, gray 14% calc(14% + 22px), transparent calc(14% + 22px) calc(15% + 22px) ,gray calc(15% + 22px) 100%);
+    background: linear-gradient(110deg, transparent 0% 14%, grey 14% calc(14% + 22px), transparent calc(14% + 22px) calc(15% + 22px) ,gray calc(15% + 22px) 100%);
 
     > div{
         line-height: 90%;
