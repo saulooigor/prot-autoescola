@@ -1,0 +1,341 @@
+.categorias{
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bebas Neue', sans-serif !important;
+    font-size: 6vi;
+
+    > span{
+        padding: 0px 0px 10px 15px;
+        width: 95%;
+        height: 95%;
+        border-left: 8px solid rgba(255, 255, 255, .25);
+        font-weight: 400;
+        flex-direction: column;
+        display: flex;
+        text-shadow: 1.5px 1.5px grey, 2.7px 2.7px 5px black;
+        
+        > i {
+            margin-top: auto;
+        }
+
+        > span b {
+            font-family: 'Teko', sans-serif !important;
+            font-size: 8vi;
+            position: relative;
+            line-height: 1vi;
+        }
+    }
+}
+
+#cat-a{
+    background-image: url(../../images/cat-a.jpg);
+}
+
+#cat-b{
+    background-image: url(../../images/cat-b.jpg);
+}
+
+#cat-c{
+    background-image: url(../../images/cat-c.jpg);
+    background-position-x: 45%;
+}
+
+#cat-d{
+    background-image: url(../../images/cat-d.jpg);
+    background-position-x: 60%;
+}
+
+#cat-e{
+    background-image: url(../../images/cat-e.jpg);
+}
+
+@media (max-width:480px) {
+    .categorias{
+        font-size: 14vi;
+
+        > span span b{
+            font-size: 16vi;
+            line-height: 2vi;
+        }
+    }
+}
+
+
+#info{
+    background-color:  rgba(211, 211, 211, 0.61);
+    font-size: 3vi;
+    color: black;
+    font-family: 'Bebas Neue', sans-serif !important;
+    
+}
+
+.fa-instagram{
+    background: #CF7F23;
+    background: linear-gradient(to right, #CF7F23 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+#infoDescrita .contato{
+    background: linear-gradient(110deg, transparent 0% 7.5%, white 7.5% 100%);
+    width: 80%;
+    padding-right: 2px;
+    border-right: 5px solid whitesmoke;
+}
+
+#infoDescrita .contato::after{
+    content: '';
+    position: relative;
+    width: 22px;
+    height: 100%;
+    top: 0px;
+    left: -95.6%;
+    background-color: whitesmoke;
+    transform: skew(-20deg);
+}
+
+#local{
+    width: 100%;
+    color: rgba(211, 211, 211, 1);
+    text-shadow: 1px 1px white;
+    background: linear-gradient(110deg, transparent 0% 14%, gray 14% calc(14% + 22px), transparent calc(14% + 22px) calc(15% + 22px) ,gray calc(15% + 22px) 100%);
+
+    > div{
+        line-height: 90%;
+        text-align: end;
+    }
+
+}
+
+.component-map{
+    border: 4px solid white;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+@media (max-width: 480px) {
+    #info{
+        font-size: 8.2vi;
+
+    }
+
+    #infoDescrita .contato{
+        width: 100%;
+
+        > i{
+            padding: 0% !important;
+            margin-left: 2px;
+        }
+    }
+
+    #local{
+        background: linear-gradient(110deg, transparent 0% 10%, gray 10% calc(10% + 22px), transparent calc(10% + 22px) calc(11% + 22px) ,gray calc(11% + 22px) 100%);
+        padding-right: 1px !important;
+        padding-left: 1px !important;
+    }
+
+    #infoDescrita{
+        padding-right: 6% !important;
+        padding-left: 7.5% !important;
+    }
+
+    
+}
+
+#valorVista{
+    font-size: 7dvi;
+    font-weight: 700;
+    font-family: 'Teko', sans-serif !important;
+    text-shadow: 2px 4px  black;
+    transform: rotate(5deg);
+    color: white;
+    position: relative;
+    text-align: center;
+    justify-content: start;
+    z-index: 0;
+    padding: 0px 10px 0px 10px;
+    background-color: gray;
+    border: 7px white;
+    border-style: ridge;
+}
+
+#pix{
+    position: relative;
+    top: 3.1dvi;
+    left: calc(12dvi + 20px);
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 4px 4px 0px #000000;
+}
+
+#valorParcelado{
+    font-size: 3.2dvi;
+    font-family: 'Bebas Neue', sans-serif !important;
+    position: relative;
+    text-shadow: 2px 2px 3px gray;
+    color: black;
+}
+
+.itensPacote{
+    font-size: 2.2dvi;
+    font-weight: 400;
+    background-color: rgba(211, 211, 211, 0.61);
+    > .row{
+        
+        margin: 0px 0px 0px 0px !important;
+        
+        > .col-6, .col-12{
+            text-align: center;
+            border-radius: 15px;
+            color: black;
+            background-color: white;
+            height: 140px;
+            margin: 4px;
+            width: calc(50% - 10px);
+            display: flex;
+            font-family: 'Bebas Neue', sans-serif !important;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+            text-shadow: 0px 2px lightgray;
+
+            > :last-child{
+                font-family: 'Teko', sans-serif !important;
+                color: darkgrey;
+                text-shadow: 0px 2px black;
+            }
+            
+        }
+
+        > .col-12{
+            width: calc(100% - 10px) !important;
+        }
+    }
+}
+
+.pacote{
+    background-color: rgba(211, 211, 211, 0.61);
+}
+
+#tituloPacote{
+    font-family: 'Teko', sans-serif !important;
+    font-size: 9vi;
+    color: black;
+    transform: scaleY(1);
+    text-align: start;
+    text-shadow: 4px 4px  white, 5.5px 5.5px gray;
+    position: relative;
+    right: 7.5dvi;
+    line-height: 100%;
+    top: 2.1dvi;
+    z-index: 3;
+}
+
+@media (max-width:480px) {
+    #valorVista{
+        font-size: 15dvi;
+    }
+
+    #valorParcelado{
+        font-size: 11.2dvi;
+    }
+
+    .itensPacote{
+        font-size: 6.2dvi;
+    }
+
+    #tituloPacote{
+        font-size: 17vi;
+        right: 15.5dvi;
+        top: 4.1dvi;
+    }
+
+    #pix{
+        top: 6.1dvi;
+        left: calc(27dvi + 20px);
+        width: 54px;
+        height: 54px;
+        
+    }
+}
+
+#gradeAlunosAprovados .row{
+    height: 200px;
+    position: relative;
+    z-index: -1;
+
+    > img {
+        object-fit: cover;
+        padding: 0px !important;
+        opacity: .4;
+       
+    }
+}
+
+#primeiraLinha::after{
+    content: '+400';
+    position: absolute;
+    top: 25%;
+    line-height: 60%;
+    left: 50%;
+    padding: 5px 5px 5px 5px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 15vi;
+    font-weight: bold;
+    color: black;
+    z-index: 1;
+    text-shadow: -1px -1px gray, 4px 4px white, 5.5px 5.5px gray;
+    font-family: 'Teko', sans-serif !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+    background-color: lightgrey;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+}
+
+#segundaLinha::after{
+    content: 'Alunos Aprovados';
+    position: absolute;
+    top: 0%;
+    line-height: 60%;
+    left: 50%;
+    padding: 5px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 6.6vi;
+    color: black;
+    z-index: 1;
+    text-shadow: -1px -1px gray, 4px 4px white, 5.5px 5.5px gray;
+    font-family: 'Teko', sans-serif !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    background-color: lightgrey;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+    #primeiraLinha::after{
+        font-size: 32vi;
+        left: 25vi;
+        top: 50%;
+    }
+
+    #segundaLinha::after{
+        font-size: 11.7vi;
+        left: 12.5vi;
+        top: 5%;
+    }
+}
+

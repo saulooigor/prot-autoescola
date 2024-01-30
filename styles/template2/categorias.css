@@ -17,10 +17,7 @@
         font-weight: 400;
         flex-direction: column;
         display: flex;
-        /* border-left: 8px solid rgba(255, 255, 255, 1); 
-        background: linear-gradient(to right, transparent 1.5%, rgba(255, 255, 255, 0.25) 1.5%); */
         text-shadow: 1.5px 1.5px grey, 2.7px 2.7px 5px black;
-        
         
         > i {
             margin-top: auto;
