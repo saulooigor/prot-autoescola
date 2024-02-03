@@ -85,7 +85,7 @@
 
 #infoDescrita .contato{
     background: linear-gradient(110deg, transparent 0% 7.5%, white 7.5% 100%);
-    width: 80%;
+    width: 95%;
     padding-right: 2px;
     /* border-right: 5px solid gray; */
     box-shadow: -20px 0 10px -20px rgba(0,0,0,0.45) inset;
@@ -97,7 +97,7 @@
     width: 22px;
     height: 100%;
     top: 0px;
-    left: -95.6%;
+    left: -95.3%;
     background-color: gray;
     transform: skew(-20deg);
 }
@@ -338,10 +338,14 @@
         left: 12.5vi;
         top: 5%;
     }
+
+    #footer{
+        font-size: 5.5vi;
+    }
 }
 
 #footer{
     font-family: 'Bebas Neue', sans-serif !important;
-    font-size: 20px;
+    font-size: 1.5vi;
     font-weight: 100;
 }
